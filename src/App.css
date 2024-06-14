@@ -1,38 +1,328 @@
+body{
+  background-color: black;
+}
 .App {
-  text-align: center;
+  overflow: scroll;
+  /* overflow-y: hidden; */
+  scrollbar-width: none;
+  transition: 2s;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App::-webkit-scrollbar {
+  display: none;
+}
+/* Navbar */
+.navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: black;
+  /* margin-top: 5px; */
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar .heading{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-left: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar .heading .name{
+  width: 116px;
+    height: 25px;
+    gap: 0px;
+    opacity: 0px;
+    /* font-family: Outfit; */
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 25.2px;
+      letter-spacing: 0.5em;
+      text-align: left;
+      color: #FFFFFF;
+}
+
+.navbar .heading .list{
+  width: 63px;
+    height: 24px;
+    gap: 0px;
+    opacity: 0px;
+    /* font-family: Outfit; */
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+      color: #FFFFFF;
+}
+
+.navbar .buttons{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  /* background-color: blue; */
+  margin-right: 10px;
+}
+
+.navbar .buttons button{
+  height: min-content;
+  margin-top: 10px;
+  margin-right: 15px;
+  border-radius: 5px;
+}
+
+
+.navbar .buttons .whitepaper{
+  width: 100px;
+    height: 30px;
+    gap: 0px;
+    opacity: 0px;
+    /* font-family: Outfit; */
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 16px;
+      text-align: center;
+      color: #FFFFFF;
+      background-color: silver;
+}
+
+.navbar .buttons .get-started{
+  width: 100px;
+    height: 30px;
+    gap: 0px;
+    opacity: 0px;
+    /* font-family: Outfit; */
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: rgb(139, 107, 151);
+}
+
+
+.get-started{
+  background-color: black;
+  /* background: radial-gradient(50% 50% at 50% 50%, rgba(158, 110, 230, 0.28) 0%, rgba(158, 110, 230, 0) 100%); */
+}
+
+.get-started-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.get-started-left{
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+.get-started-left span{
+  border: 1px solid white;
+  color: #FFFFFF;
+  border-radius: 5px;
+  background: linear-gradient(94.15deg, rgba(255, 255, 255, 0.3) 0%, rgba(171, 171, 171, 0.15) 100%);
+}
+
+.get-started-left h1{
+  /* color: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.5) 100%); */
+  color: silver;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 59px;
+    text-align: left;
+}
+
+.get-started-left p{
+  /* font-family: Outfit; */
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: left;
+    color: #FFFFFFCC;
+}
+
+.get-started-left button{
+  background-color: rgb(139, 107, 151);
+  color: #FFFFFF;
+  height: 50px;
+  border-radius: 5px;
+  width: 150px;
+}
+
+.get-started-right{
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.get-started-right .entrepreneur{
+  /* width: 178.31px; */
+    height: 120px;
+    object-fit: cover;
+    width: 150px;
+    border-radius: 5px;
+
+}
+
+
+
+/* Service */
+
+
+
+/* ImageCard.css */
+.image-card {
+  /* display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+.image-card img {
+  /* width: 100%; */
+  height: 150px;
+  margin-bottom: 50px;
+}
+
+/* BackgroundImageCards.css */
+.image-cards-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin-top: 100px;
+  margin-left: 200px;
+    margin-right: 200px;
+}
+
+
+.avatar{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+
+.avatar img{
+  height: 400px;
+  width: 50%;
+}
+
+.avat{
+  margin-top: 100px;
+}
+
+.avatar div h1{
+  color: #FFFFFF;
+  /* font-family: Outfit; */
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 64px;
+    text-align: left;
+    margin-left: 50px;
+}
+
+.avatar div p {
+  color: rgb(88, 81, 81);
+  /* font-family: Outfit; */
+  /* font-size: 32px; */
+  font-weight: 600;
+  line-height: 64px;
+  text-align: left;
+  margin-left: 50px;
+}
+
+
+.tools{
+  margin-top: 100px;
+}
+
+.tools-container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tool-items{
+  background-color:rgb(94, 90, 90);
+  color: #FFFFFF;
+  font-size: 32px;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+
+.tools-flex{
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+.ai-outfits{
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.ai-outfits div div{
+  width: 500px;
+  justify-content: space-around;
+  height: 400px;
+  background-color:rgb(94, 90, 90);
+  margin-left: 50px;
+  border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ai-outfits div img{
+  width: 100%;
+  /* margin-left: 50px; */
+  margin-top: 10px;
+  height: 400px;
+  border-radius: 10px;
+}
+
+.ai-outfits .flex-box{
+  width: 500px;
+    justify-content: space-around;
+    height: 200px;
+    background-color: rgb(94, 90, 90);
+    margin-left: 50px;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+
+.roadmap{
+  margin-top: 200px;
+}
+
+.roadmap-container h1{
+  text-align: center;
+  color: #FA75F8 ;
+  font-size: 64px;
+}
+
+
+.phases{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 400px;
+  flex-wrap: wrap;
+  margin-left: 50px;
+  margin-bottom: 100px;
+  /* background-color: #FFFFFF; */
+}
+
+.phases-image img{
+  height: 400px;
+  width: 100%;
+  
 }
