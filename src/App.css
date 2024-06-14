@@ -1,16 +1,7 @@
 body{
   background-color: black;
 }
-.App {
-  overflow: scroll;
-  /* overflow-y: hidden; */
-  scrollbar-width: none;
-  transition: 2s;
-}
 
-.App::-webkit-scrollbar {
-  display: none;
-}
 /* Navbar */
 .navbar{
   display: flex;
